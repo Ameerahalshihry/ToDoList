@@ -1,14 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './css/index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 //setup redux
 import {Provider} from 'react-redux'
 import {createStore} from 'redux'
-import reducer from './reducer'
-
-const myStore = createStore(reducer)
+import {addTodo} from './redux/reducers/addTodo.reducer'
+const myStore = createStore(addTodo)
 
 ReactDOM.render(
   <Provider store={myStore}>
